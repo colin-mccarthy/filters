@@ -1,0 +1,14 @@
+
+---
+- hosts: localhost
+  gather_facts: no
+  connection: local
+
+  tasks:
+     - name: Store Name
+       set_fact:
+         co: "Globomantics"
+
+     - name: Print with upper
+       debug:
+         msg: "{{ co | upper }}"
